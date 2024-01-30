@@ -21,7 +21,7 @@ import Badge from 'react-bootstrap/Badge'
 
 class AllTheBooks extends Component {
   state = {
-    activeGenre: fantasy,
+    genreSelected: fantasy,
   }
   render() {
     return (
@@ -33,27 +33,27 @@ class AllTheBooks extends Component {
                 <Dropdown.Toggle variant="dark">Generi</Dropdown.Toggle>
                 <Dropdown.Menu>
                   <Dropdown.Item
-                    onClick={() => this.setState({ activeGenre: fantasy })}
+                    onClick={() => this.setState({ genreSelected: fantasy })}
                   >
                     Fantasy
                   </Dropdown.Item>
                   <Dropdown.Item
-                    onClick={() => this.setState({ activeGenre: history })}
+                    onClick={() => this.setState({ genreSelected: history })}
                   >
                     History
                   </Dropdown.Item>
                   <Dropdown.Item
-                    onClick={() => this.setState({ activeGenre: horror })}
+                    onClick={() => this.setState({ genreSelected: horror })}
                   >
                     Horror
                   </Dropdown.Item>
                   <Dropdown.Item
-                    onClick={() => this.setState({ activeGenre: romance })}
+                    onClick={() => this.setState({ genreSelected: romance })}
                   >
                     Romance
                   </Dropdown.Item>
                   <Dropdown.Item
-                    onClick={() => this.setState({ activeGenre: scifi })}
+                    onClick={() => this.setState({ genreSelected: scifi })}
                   >
                     Sci-Fi
                   </Dropdown.Item>
@@ -62,7 +62,7 @@ class AllTheBooks extends Component {
             </Col>
           </Row>
           <Row className="g-3" xs={2} md={3} lg={4} xl={5} xxl={6}>
-            {this.state.activeGenre.map((book) => {
+            {this.state.genreSelected.map((book) => {
               return (
                 <Col key={book.asin}>
                   <Card className="h-100">
