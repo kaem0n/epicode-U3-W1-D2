@@ -74,11 +74,11 @@ class AllTheBooks extends Component {
                       </div>
                       <div>
                         <Card.Text className="m-0">
-                          <span className="fw-bold">Category:</span>{' '}
+                          <span className="fw-bold">Categoria:</span>{' '}
                           {book.category}
                         </Card.Text>
                         <Card.Text>
-                          <span className="fw-bold">Price:</span>{' '}
+                          <span className="fw-bold">Prezzo:</span>{' '}
                           {fixPrice(String(book.price))}€
                         </Card.Text>
                         <Button variant="dark" className="w-100">
