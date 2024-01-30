@@ -78,7 +78,8 @@ class AllTheBooks extends Component {
                           {book.category}
                         </Card.Text>
                         <Card.Text>
-                          <span className="fw-bold">Price:</span> {book.price}€
+                          <span className="fw-bold">Price:</span>{' '}
+                          {fixPrice(String(book.price))}€
                         </Card.Text>
                         <Button variant="dark" className="w-100">
                           Aggiungi al carrello
@@ -94,6 +95,16 @@ class AllTheBooks extends Component {
       </>
     )
   }
+}
+
+const fixPrice = (str) => {
+  let text = str.replace('.', ',')
+  if ((text.indexOf(',') === 2 && text.length < 5) || text.length === 3) {
+    text += '0'
+  } else if (text.indexOf(',') === -1) {
+    text += ',00'
+  }
+  return text
 }
 
 export default AllTheBooks
