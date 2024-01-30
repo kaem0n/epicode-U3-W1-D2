@@ -1,4 +1,5 @@
 // DATA IMPORTS
+
 import fantasy from '../data/fantasy.json'
 import history from '../data/history.json'
 import horror from '../data/horror.json'
@@ -6,6 +7,7 @@ import romance from '../data/romance.json'
 import scifi from '../data/scifi.json'
 
 // COMPONENT IMPORTS
+
 import { Component } from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -97,6 +99,8 @@ class AllTheBooks extends Component {
   }
 }
 
+// OTHER FUNCTIONS
+
 const fixPrice = (str) => {
   let text = str.replace('.', ',')
   if (text.slice(text.indexOf(',')).length === 2) {
@@ -106,5 +110,7 @@ const fixPrice = (str) => {
   }
   return text
 }
+
+// EXPORT
 
 export default AllTheBooks
