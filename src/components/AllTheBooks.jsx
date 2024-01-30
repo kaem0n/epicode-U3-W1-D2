@@ -66,7 +66,7 @@ class AllTheBooks extends Component {
                   <Card className="h-100">
                     <Card.Img variant="top" src={book.img} />
                     <Card.Body className="d-flex flex-column justify-content-between">
-                      <div>
+                      <div className="mb-2">
                         <Card.Title>{book.title}</Card.Title>
                         <Card.Subtitle>
                           <Badge bg="danger">ASIN: {book.asin}</Badge>
