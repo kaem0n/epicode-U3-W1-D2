@@ -4,7 +4,7 @@ const MyFooter = () => {
   return (
     <>
       <p>
-        &copy;2023-<span>{currentYear}</span> -{' '}
+        &copy;2023-{currentYear} -{' '}
         <a
           href="https://github.com/kaem0n"
           className="link-underline link-underline-opacity-0"
