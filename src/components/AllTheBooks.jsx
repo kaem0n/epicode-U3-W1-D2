@@ -99,7 +99,7 @@ class AllTheBooks extends Component {
 
 const fixPrice = (str) => {
   let text = str.replace('.', ',')
-  if ((text.indexOf(',') === 2 && text.length < 5) || text.length === 3) {
+  if (text.slice(text.indexOf(',')).length === 2) {
     text += '0'
   } else if (text.indexOf(',') === -1) {
     text += ',00'
